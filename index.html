@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Ryan Smyth | Rails Developer</title>
+  <link href="css/layout.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/normalize.css"/>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+
+		<div id="header">
+      <nav>
+        <div class="navbar-left">
+          <h1><span id="title" data-hover="Hire me :)">H1 Title</span></h1>
+        </div>
+        <div class="navbar-right">
+          <input type="search" id="search" placeholder="Search" />
+          <button type="submit"><span class="icon"><i class="fa fa-search"></i></span></button>
+        </div>
+      </nav>
+		</div>
+
+		<div id="content">
+      <img id="pic" src="img/thumbs.jpg" alt="Me giving you guys a thumbs up!"/>
+      <h2>Fizz-Buzz</h2>
+      <h3>Ruby</h3>
+        <div class="code">
+          <pre>
+            <code>
+              0.upto(99) do |i|
+                if i % 5 == 0 && i % 3 ==0
+                  puts "Fizz-Buzz"
+                elsif i % 3 == 0
+                  puts "Fizz"
+                elsif i % 5 == 0
+                  puts "Buzz"
+                end
+              end
+            </code>
+          </pre>
+        </div>
+      <h3>JavaScript</h3>
+        <div class="code">
+          <pre>
+            <code>
+              for (var i=0; i <= 99; i++)
+              {
+                  if (i % 15 == 0)
+                      console.log("Fizz-Buzz");
+                  else if (i % 3 == 0)
+                      console.log("Fizz");
+                  else if (i % 5 == 0)
+                      console.log("Buzz");
+                  else
+                      console.log(i);
+              }
+            </code>
+          </pre>
+        </div>
+
+      <iframe src="img/SmythTechnicalResume.pdf" style="width:718px; height:700px;" frameborder="0"></iframe>
+
+		</div>
+
+		<div id="footer">
+      <p>&copy; 2016 Ryan Smyth <a href="tel:720-354-1934"><i class="fa fa-phone" aria-hidden="true"></i></a>   <a href="mailto:rynsmyth@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a></p>
+
+		</div>
+  </div>
+  <script src="js/script.js"></script>
+  <script>
+$('#title').hover(
+    function() {
+        var $this = $(this); // caching $(this)
+        $this.data('initialText', $this.text());
+        $this.text("Hire Me :)");
+    },
+    function() {
+        var $this = $(this); // caching $(this)
+        $this.text($this.data('initialText'));
+    }
+);
+  </script>
+</body>
+</html>
